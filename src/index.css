@@ -137,9 +137,10 @@ img {
 
 @media (max-width: 1080px) {
   #root{
-    background: url("./assets/bg-mobile.svg") no-repeat !important;
-    background-position: center !important;
-    background-size: contain !important;
+    background: 1vw 1vh/100% url("./assets/bg-mobile.svg") no-repeat!important;
+    
+    /* background-position: center !important; */
+    /* background-size: contain !important; */
     background-color: var(--violet) !important;
   }
 
@@ -148,14 +149,16 @@ img {
   }
 
   .logo{
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
+    background-size: 150px auto !important;
+    height: 35px !important;
     margin-bottom: 0px !important;
   }
 
   .illustration{
     height: 284px !important;
     width: 657px;
-    padding: 2rem;
+    padding: 1rem !important;
   }
   
   .illustration > div{
@@ -174,10 +177,18 @@ img {
   
   .infoDiv{
     text-align: center !important;
+    font-size: 0.9rem !important;
+    padding: 0 1rem !important;
   }
 
   .registerDiv{
     text-align: center !important ;
+  }
+
+  .registerDiv button{
+    height: 2rem !important;
+    width: 13rem !important;
+    font-size: 0.8rem !important;
   }
 
   .socialMediaIcons{
