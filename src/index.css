@@ -1,13 +1,193 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --white: rgb(255, 255, 255);
+  --black: rgb(0,0,0);
+}
+
+#root {
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh; 
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background: url("./assets/bg-desktop.svg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--violet);
+  font-size: 100%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-md-7, .col-md-5, .col-md-12, .col-12{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.logo{
+  background:url("./assets/logo.svg") no-repeat;
+  background-size: 200px auto;
+  height: 49pt;
+  margin-bottom: 40px;
+}
+
+.illustration{
+  height: 410px;
+  width: 657px;
+  /* padding: 10px; */
+}
+
+.illustration > div{
+  background:url("./assets/illustration-mockups.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.pageInfo{
+  padding: 4rem 0 0 2rem;
+}
+
+.headingDiv{
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.headingDiv h1{
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.infoDiv{
+  color: var(--white);
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.registerDiv button{
+  height: 3rem;
+  width: 10rem;
+  border-radius: 25px;
+  color: var(--violet);
+  cursor: pointer;
+  border: none;
+}
+
+.registerDiv button:hover{
+  color: var(--white);
+  background-color:var(--soft-magenta);
+}
+
+.socialMediaIcons{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.socialMediaIcons div{
+  margin-right: 30px;
+  padding: 10px;
+  border: 1px solid var(--white);
+  border-radius: 70%;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.socialMediaIcons div:hover{
+  cursor: pointer;
+  border: 1px solid var(--soft-magenta);
+  color: var(--soft-magenta);
+}
+
+@media (max-width: 1080px) {
+  #root{
+    background: url("./assets/bg-mobile.svg") no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-color: var(--violet) !important;
+  }
+
+  .container{
+    width: 90% !important;
+  }
+
+  .logo{
+    margin-top: 2rem;
+    margin-bottom: 0px !important;
+  }
+
+  .illustration{
+    height: 284px !important;
+    width: 657px;
+    padding: 2rem;
+  }
+  
+  .illustration > div{
+    height: 100%;
+    width: 100%;
+  }
+
+  .pageInfo{
+    padding: 0 2rem !important;
+  }
+
+  .headingDiv h1{
+    font-size: 1.75rem !important;
+    text-align: center;
+  }
+  
+  .infoDiv{
+    text-align: center !important;
+  }
+
+  .registerDiv{
+    text-align: center !important ;
+  }
+
+  .socialMediaIcons{
+    display: flex;
+    justify-content: center !important;
+    margin-top: 2rem !important;
+  }
+
+  .socialMediaIcons div{
+    margin-left: 40px !important;
+  }
+}
+
